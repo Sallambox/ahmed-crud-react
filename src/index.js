@@ -10,13 +10,11 @@ import reducer from "./reducers/combineReducers";
 import "bootstrap/dist/css/bootstrap.min.css";
 const store = createStore(reducer, applyMiddleware(thunk));
 
-ReactDOM.render( <
-    Provider store = { store } >
-    <
-    App / >
-    <
-    /Provider>,
-    document.getElementById("root")
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
